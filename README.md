@@ -10,9 +10,17 @@ MInject为一个方便View注入，点击事件注入的库。与ButterKnift类�
 
 ####方式一： 使用本地MInject.aar文件
 1. 下载MInject.aar，将此文件放置到工程libs文件夹下
-2. 给点前Model添加v4依赖
+2. 给点前Model添加v4依赖,和MInject.aar的依赖
+    ```
+    dependencies {
+        compile fileTree(dir: 'libs', include: ['*.jar'])
+
+        //加载本地的lib下的aar文件
+        compile(name: 'MInject', ext: 'aar')
+        compile 'com.android.support:support-v4:22.1.1'
+    }
+    ```
 3. 配置当前model的build.gradle文件
-    添加此段代码：
     ```
     buildscript {
         repositories {
@@ -23,16 +31,6 @@ MInject为一个方便View注入，点击事件注入的库。与ButterKnift类�
         }
     }
     ```
-
-```
-dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-
-    //加载本地的lib下的aar文件
-    compile(name: 'MInject', ext: 'aar')
-    compile 'com.android.support:support-v4:22.1.1'
-}
-```
 
 ####方式二： 从中央仓库添加
 
@@ -70,6 +68,7 @@ dependencies {
         }
     ```
 2. 同时给多个View注入点击方法
+
     ```
         @MOnclick(value = {R.id.btn_imageview, R.id.btn_button})
         private void click2(View view){
@@ -84,7 +83,7 @@ dependencies {
                     break;
             }
         }
-    ```
+   ```
 3. 设置点击抖动时间
     ```
         //设置了btn_textview2的点击抖动时间为5000毫秒，5秒内不能连续点击
