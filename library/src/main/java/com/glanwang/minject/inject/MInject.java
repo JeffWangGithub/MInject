@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.content.res.Resources;
 import android.os.Build;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 
 import java.lang.reflect.Field;
@@ -38,7 +39,6 @@ public class MInject {
     public static void inject(Activity activity){
         inject(activity,activity.getWindow().getDecorView());
     }
-
 
     /**
      * 在v4包中的Fragment中使用

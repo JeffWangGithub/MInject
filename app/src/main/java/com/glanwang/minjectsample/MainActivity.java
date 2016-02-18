@@ -1,7 +1,7 @@
 package com.glanwang.minjectsample;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -13,7 +13,7 @@ import com.glanwang.minject.inject.MInject;
 import com.glanwang.minject.inject.MOnclick;
 import com.glanwang.minjectsample.utils.ToastUtils;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends FragmentActivity {
     private final String TAG = "MInject";
 
     @Inject(R.id.btn_textview)
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //注入View，病支持点击事件方法的注入
+        //注入View，并支持点击事件方法的注入
         MInject.inject(this);
     }
 
