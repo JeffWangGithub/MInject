@@ -87,9 +87,11 @@ MInject为一个方便View注入，点击事件注入的库。与ButterKnift类�
    ```
 3. 设置点击抖动时间
     ```
+    
         //设置了btn_textview2的点击抖动时间为5000毫秒，5秒内不能连续点击
         @MOnclick(value = R.id.btn_textview2, shakeTime = 5000)
         private void click3(View view){
+        
             switch (view.getId()) {
                 case R.id.btn_textview2:
                     clickCount();
