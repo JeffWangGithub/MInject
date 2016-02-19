@@ -23,6 +23,7 @@ MInject为一个方便View注入，点击事件注入的库。与ButterKnift类�
 3. 配置当前model的build.gradle文件
     ```
     buildscript {
+
         repositories {
             jcenter()
             flatDir {

@@ -6,7 +6,6 @@ buildscript {
             dirs 'libs' // this way we can find the .aar file in libs folder 到libs文件夹下寻找.aar包
         }
     }
-
 }
 
 apply plugin: 'com.android.application'
@@ -33,10 +32,10 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    //
     //compile project(':library')
+    compile 'com.jayfeng.lesscode:library:1.0'
 
     //加载本地的lib下的aar文件
-    compile(name: 'MInject', ext: 'aar')
-    compile 'com.android.support:support-v4:22.1.1'
+//    compile(name: 'MInject', ext: 'aar')
+//    compile 'com.android.support:support-v4:22.1.1'
 }
