@@ -40,6 +40,7 @@ MInject为一个方便View注入，点击事件注入的库。与ButterKnift类�
 ###使用
 1. 在合适的时机注入MInject.inject()方法。如在Activity中
     ```
+    
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -47,6 +48,7 @@ MInject为一个方便View注入，点击事件注入的库。与ButterKnift类�
             //注入View，并支持点击事件方法的注入
             MInject.inject(this);
         }
+        
     ```
 2. 使用@Inject注解注入View
     ```
