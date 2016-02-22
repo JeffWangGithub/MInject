@@ -35,6 +35,14 @@ MInject为一个方便View注入，点击事件注入的库。与ButterKnift类�
 
 ####方式二： 从中央仓库添加
     jcenter正在审核中，通过后会同步更新
+    ```   
+    dependencies {
+        compile fileTree(dir: 'libs', include: ['*.jar'])
+        //直接从中央仓库引入
+        compile 'com.glanwang.minject:MInject_core:1.0.0'
+    }
+    ```
+
 
 
 ###使用
